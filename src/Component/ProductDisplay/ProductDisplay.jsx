@@ -1,30 +1,19 @@
 import React from "react";
 import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png";
-import sampleProductImage from "../Assets/product_122.webp";
 import "./ProductDisplay.css"
 
-const ProductDisplay = () => {
-  // Hard-coded product for testing
-  const product = {
-    name: "Sample Product",
-    image: sampleProductImage, // Use the imported image
-    old_price: 120.0, // Example old price
-    new_price: 100.0, // Example new price
-  };
-
-  if (!product || !product.image) {
-    return <div>Loading product...</div>;
-  }
-
+const ProductDisplay = (props) => {
+    const { product } = props;
+  
   return (
     <div className="productdisplay">
       <div className="productdisplay-left">
         <div className="productdisplay-img-list">
-          <img src={product.image} alt={product.name || "Product"} />
-          <img src={product.image} alt={product.name || "Product"} />
-          <img src={product.image} alt={product.name || "Product"} />
-          <img src={product.image} alt={product.name || "Product"} />
+          <img src={product.image} alt="" />
+          <img src={product.image} alt=""/>
+          <img src={product.image} alt=""/>
+          <img src={product.image} alt=""/>
         </div>
         <div className="productdisplay-img">
           <img
