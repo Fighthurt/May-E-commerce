@@ -121,8 +121,10 @@
 .product-display-right-prices{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 15px;
+    color:#ba0a0a;
+    font-weight: 900;
 }
 
 .productdisplay-right-price-old {
@@ -134,8 +136,28 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 18px;
-    font-size: 24px;
+    gap: 10px;
+    font-size: 20px;
     font-weight: 700;
+    margin-top: 6px;
 
+}
+
+.productdisplay-right-size-options div {
+    height: 48px;
+    width: 48px;
+    padding: 4px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.productdisplay-right-size-options div:hover {
+    color: #ba0a0a;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.3s ease-in-out;
 }
