@@ -1,8 +1,8 @@
 import React from "react";
-import './ProductDisplay.css';
 import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png";
-import sampleProductImage from "../Assets/product_122.webp"; // Import the correct image
+import sampleProductImage from "../Assets/product_122.webp";
+import "./ProductDisplay.css"
 
 const ProductDisplay = () => {
   // Hard-coded product for testing
@@ -67,7 +67,7 @@ const ProductDisplay = () => {
             <div>XL</div>
           </div>
         </div>
-        <button>Add to bag</button>
+        <button className="addProductBtn">Add to bag</button>
         <p className="productdisplay-right-category">
           <span>Category:</span> Women, Tops, Shirts & Blouses
         </p>
