@@ -1,19 +1,13 @@
 import React from "react";
 import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png";
-import sampleProductImage from "../Assets/product_122.webp";
-import "./ProductDisplay.css"
+import "./ProductDisplay.css";
 
-const ProductDisplay = () => {
-  // Hard-coded product for testing
-  const product = {
-    name: "Sample Product",
-    image: sampleProductImage, // Use the imported image
-    old_price: 120.0, // Example old price
-    new_price: 100.0, // Example new price
-  };
+const ProductDisplay = ({ id, image, name, new_price, old_price }) => {
+  console.log("ProductDisplay:", { id, image, name, new_price, old_price });
 
-  if (!product || !product.image) {
+  // Check if the product data is available
+  if (!image || !name || !new_price || !old_price) {
     return <div>Loading product...</div>;
   }
 
@@ -21,22 +15,24 @@ const ProductDisplay = () => {
     <div className="productdisplay">
       <div className="productdisplay-left">
         <div className="productdisplay-img-list">
-          <img src={product.image} alt={product.name || "Product"} />
-          <img src={product.image} alt={product.name || "Product"} />
-          <img src={product.image} alt={product.name || "Product"} />
-          <img src={product.image} alt={product.name || "Product"} />
+          {/* Display multiple images if available */}
+          <img src={image} alt={name || "Product"} />
+          <img src={image} alt={name || "Product"} />
+          <img src={image} alt={name || "Product"} />
+          <img src={image} alt={name || "Product"} />
         </div>
         <div className="productdisplay-img">
           <img
             className="productdisplay-main-img"
-            src={product.image}
-            alt={product.name || "Product"}
+            src={image}
+            alt={name || "Product"}
           />
         </div>
       </div>
       <div className="productdisplay-right">
-        <h1>{product.name}</h1>
+        <h1>{name}</h1>
         <div className="productdisplay-right-stars">
+          {/* Static stars for rating */}
           <img src={star_icon} alt="star rating" />
           <img src={star_icon} alt="star rating" />
           <img src={star_icon} alt="star rating" />
@@ -46,10 +42,10 @@ const ProductDisplay = () => {
         </div>
         <div className="product-display-right-prices">
           <div className="productdisplay-right-price-old">
-            ${product.old_price}
+            ${old_price}
           </div>
           <div className="productdisplay-right-price-new">
-            ${product.new_price}
+            ${new_price}
           </div>
         </div>
         <div className="productdisplay-right-description">

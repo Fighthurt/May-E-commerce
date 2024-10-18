@@ -34,7 +34,7 @@ function App() {
           />
 
           {/* Route for individual product details */}
-          <Route path="/product/:productId" element={<Product />} />
+          <Route path="/product/:product_id" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginSignup />} />
         </Routes>

@@ -84,7 +84,7 @@
 .addProductBtn  {
   appearance: button;
   backface-visibility: hidden;
-  background-color: #405cf5;
+  background-color: rgb(174, 9, 9);
   border-radius: 6px;
   border-width: 0;
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
@@ -107,7 +107,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 100%;
+  width: 30%;
 }
 
 .addProductBtn:disabled {
@@ -116,4 +116,48 @@
 
 .addProductBtn:focus {
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+.product-display-right-prices{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    color:#ba0a0a;
+    font-weight: 900;
+}
+
+.productdisplay-right-price-old {
+    text-decoration: line-through; /* Apply strikethrough effect */
+    color: gray; 
+}
+
+.productdisplay-right-size-options {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 6px;
+
+}
+
+.productdisplay-right-size-options div {
+    height: 48px;
+    width: 48px;
+    padding: 4px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.productdisplay-right-size-options div:hover {
+    color: #ba0a0a;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.3s ease-in-out;
 }
