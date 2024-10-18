@@ -117,3 +117,25 @@
 .addProductBtn:focus {
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
 }
+
+.product-display-right-prices{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.productdisplay-right-price-old {
+    text-decoration: line-through; /* Apply strikethrough effect */
+    color: gray; 
+}
+
+.productdisplay-right-size-options {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+    font-size: 24px;
+    font-weight: 700;
+
+}
