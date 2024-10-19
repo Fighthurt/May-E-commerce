@@ -68,16 +68,20 @@
     background: #f3f3f3;
 }
 .nav-cart-count{
+    position: absolute;
+    margin-top: -50px; 
+    margin-left: 30px; 
+    
     width: 22px;
     height: 22px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -35px;
-    margin-left: -55px;
-    border-radius: 11px;
+    border-radius: 50%; /* Makes the count circular */
     font-size: 14px;
     background: red;
     color: white;
-
+    font-weight: bold;
 }
+
+

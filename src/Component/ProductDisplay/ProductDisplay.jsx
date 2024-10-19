@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png";
 import "./ProductDisplay.css"
+import { ShopContext } from "../../Context/ShopContext";
 
 const ProductDisplay = (props) => {
-    const { product } = props;
+  const { product } = props;
+  const { addToCart } = useContext(ShopContext); 
   
   return (
     <div className="productdisplay">
@@ -56,7 +58,7 @@ const ProductDisplay = (props) => {
             <div>XL</div>
           </div>
         </div>
-        <button className="addProductBtn">Add to bag</button>
+        <button className="addProductBtn" onClick={() =>{addToCart(product.id)}}>Add to cart</button>
         <p className="productdisplay-right-category">
           <span>Category:</span> Women, Tops, Shirts & Blouses
         </p>
