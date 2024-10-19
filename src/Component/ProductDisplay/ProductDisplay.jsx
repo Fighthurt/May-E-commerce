@@ -20,14 +20,15 @@ const ProductDisplay = (props) => {
         <div className="productdisplay-img">
           <img
             className="productdisplay-main-img"
-            src={product.image}
-            alt={product.name || "Product"}
+            src={image}
+            alt={name || "Product"}
           />
         </div>
       </div>
       <div className="productdisplay-right">
-        <h1>{product.name}</h1>
+        <h1>{name}</h1>
         <div className="productdisplay-right-stars">
+          {/* Static stars for rating */}
           <img src={star_icon} alt="star rating" />
           <img src={star_icon} alt="star rating" />
           <img src={star_icon} alt="star rating" />
@@ -37,10 +38,10 @@ const ProductDisplay = (props) => {
         </div>
         <div className="product-display-right-prices">
           <div className="productdisplay-right-price-old">
-            ${product.old_price}
+            ${old_price}
           </div>
           <div className="productdisplay-right-price-new">
-            ${product.new_price}
+            ${new_price}
           </div>
         </div>
         <div className="productdisplay-right-description">

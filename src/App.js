@@ -32,8 +32,12 @@ function App() {
           />
 
           {/* Route for individual product details */}
+<<<<<<< HEAD
           <Route path="/product/:productId" element={<Product />} />
 
+=======
+          <Route path="/product/:product_id" element={<Product />} />
+>>>>>>> 9fcc9e2ada106d427e280622e80c8ee7f20c5167
           <Route path="/cart" element={<Cart />} />
           <Route path="/" element={<Shop />} />
           <Route path="/login" element={<LoginSignup />} />
