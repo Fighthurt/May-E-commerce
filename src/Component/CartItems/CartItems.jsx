@@ -29,7 +29,7 @@ const CartItems = () => {
         if (productQuantity > 0) {
           return (
             <div key={product.id}>
-              <div className="cartitems-format">
+              <div className="cartitems-format cartitems-format-main" >
                 {/* Link to navigate to product details */}
                 <Link to={`/product/${product.id}`}>
                   <img
