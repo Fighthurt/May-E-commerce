@@ -1,69 +1,139 @@
 .loginsignup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 80vh;
-    background-color: #fce3fe; 
-    padding-top: 100px;
+    height: 100vh; /* Full viewport height */
+    background-color: #f0f0f0;
+    padding: 20px; /* Added padding for smaller screens */
+    box-sizing: border-box; /* Include padding in the width */
 }
 
 .loginsignup-container {
-    padding: 40px 60px;
-    background: white;
-    height: 600px;
-    width: 580px;
-    margin: auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    height: auto; /* Change to auto to fit content */
+    max-width: 580px; /* Maintain max width */
+    width: 100%;
 }
 
-.loginsignup-container h1 {
+h1 {
+    text-align: center;
+    color: #333;
     margin: 20px 0px;
 }
 
-.loginsignup-fields{
+form {
     display: flex;
     flex-direction: column;
-    gap: 29px;
-    margin-top: 30px;
 }
 
-.loginsignup-fields input {
-    height: 72px;
+input {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 16px;
     width: 100%;
-    padding-left: 20px;
-    border: 1px solid #c9c9c9;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: red;
     outline: none;
-    color: #5c5c5c;
-    font-size: 18px;
 }
 
-.loginsignup-container button {
-    width: 580px;
-    height: 72px;
-    background: #ff4141;
-    margin-top: 30px;
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: 500;
+button {
+    background-color: red;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
     border: none;
+    border-radius: 6px;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.loginsignup-login{
-    margin-top: 20px;
-    color: #5c5c5c;
-    font-size: 18px;
+button:hover {
+    background-color: darkred; /* Darker shade on hover for better contrast */
+}
+
+.loginsignup-login {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
     font-weight: 500;
 }
 
-.loginsignup-login span{
-    color: #ff4141;
-    font-weight: 600;
+.toggle-link {
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.loginsignup-agree{
+.toggle-link:hover {
+    text-decoration: underline;
+}
+
+.loginsignup-agree {
     display: flex;
     align-items: center;
-    margin-top: 25px;
-    gap: 20px;
-    color: #5c5c5c;
-    font-size: 18px;
-    font-weight: 500;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #777;
+}
+
+.loginsignup-agree p {
+    margin-left: 8px;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 6px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .loginsignup-container {
+        padding: 20px; /* Reduce padding for tablets */
+    }
+
+    h1 {
+        font-size: 28px; /* Smaller heading size for tablets */
+    }
+
+    input, button {
+        font-size: 14px; /* Smaller font size for inputs and buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .loginsignup {
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
+    .loginsignup-container {
+        padding: 15px; /* Reduce padding for mobile */
+    }
+
+    h1 {
+        font-size: 24px; /* Smaller heading size for mobile */
+    }
+
+    input, button {
+        font-size: 12px; /* Smaller font size for inputs and buttons */
+    }
+
+    .loginsignup-agree {
+        flex-direction: column; /* Stack agree section on mobile */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .loginsignup-agree p {
+        margin-left: 0; /* Remove margin for mobile */
+        margin-top: 5px; /* Add margin-top for spacing */
+    }
 }

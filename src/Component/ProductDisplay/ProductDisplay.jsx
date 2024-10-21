@@ -1,74 +1,91 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png";
 import "./ProductDisplay.css";
+import { ShopContext } from "../../Context/ShopContext";
 
-const ProductDisplay = ({ id, image, name, new_price, old_price }) => {
-  console.log("ProductDisplay:", { id, image, name, new_price, old_price });
+const ProductDisplay = (props) => {
+  const { product } = props;
+  const { addToCart } = useContext(ShopContext);
 
-  // Check if the product data is available
-  if (!image || !name || !new_price || !old_price) {
-    return <div>Loading product...</div>;
-  }
+  const [selectedSize, setSelectedSize] = useState(""); // State for selected size
+
+  const handleAddToCart = () => {
+    if (!selectedSize) {
+      alert("Please select a size before adding to the cart.");
+      return;
+    }
+    addToCart(product.id, selectedSize); // Pass selected size along with product ID
+  };
 
   return (
     <div className="productdisplay">
       <div className="productdisplay-left">
         <div className="productdisplay-img-list">
-          {/* Display multiple images if available */}
-          <img src={image} alt={name || "Product"} />
-          <img src={image} alt={name || "Product"} />
-          <img src={image} alt={name || "Product"} />
-          <img src={image} alt={name || "Product"} />
+          {/* Display multiple images dynamically */}
+          {product.images?.map((imgSrc, index) => (
+            <img key={index} src={imgSrc} alt={`Product image ${index + 1}`} />
+          ))}
         </div>
         <div className="productdisplay-img">
           <img
             className="productdisplay-main-img"
-            src={image}
-            alt={name || "Product"}
+            src={product.image}
+            alt={product.name || "Product"}
           />
         </div>
       </div>
       <div className="productdisplay-right">
-        <h1>{name}</h1>
+        <h1>{product.name}</h1>
         <div className="productdisplay-right-stars">
           {/* Static stars for rating */}
-          <img src={star_icon} alt="star rating" />
-          <img src={star_icon} alt="star rating" />
-          <img src={star_icon} alt="star rating" />
-          <img src={star_icon} alt="star rating" />
-          <img src={star_dull_icon} alt="star rating" />
-          <p>(122)</p>
+          {[...Array(5)].map((_, index) => (
+            <img
+              key={index}
+              src={index < product.rating ? star_icon : star_dull_icon}
+              alt="star rating"
+            />
+          ))}
+          <p>({product.reviews || 122})</p>
         </div>
         <div className="product-display-right-prices">
-          <div className="productdisplay-right-price-old">
-            ${old_price}
-          </div>
+          {product.old_price && (
+            <div className="productdisplay-right-price-old">
+              ${product.old_price}
+            </div>
+          )}
           <div className="productdisplay-right-price-new">
-            ${new_price}
+            ${product.new_price}
           </div>
         </div>
         <div className="productdisplay-right-description">
-          Available In Black. Faux Leather Blouse Top Long Sleeve Sweetheart
-          Studded Detail Hook And Eye Closure Cropped Non Stretch Coating: 100%
-          Polyurethane Base Fabric: 100% Polyester Imported
+          {/* Dynamic description */}
+          {product.description || "No description available for this product."}
         </div>
         <div className="productdisplay-right-size">
           <h1>Select Size</h1>
           <div className="productdisplay-right-size-options">
-            <div>XS</div>
-            <div>S</div>
-            <div>M</div>
-            <div>L</div>
-            <div>XL</div>
+            {["XS", "S", "M", "L", "XL"].map((size) => (
+              <div
+                key={size}
+                className={`size-option ${
+                  selectedSize === size ? "selected" : ""
+                }`} // Add selected style
+                onClick={() => setSelectedSize(size)} // Set selected size
+              >
+                {size}
+              </div>
+            ))}
           </div>
         </div>
-        <button className="addProductBtn">Add to bag</button>
+        <button className="addProductBtn" onClick={handleAddToCart}>
+          Add to cart
+        </button>
         <p className="productdisplay-right-category">
-          <span>Category:</span> Women, Tops, Shirts & Blouses
+          <span>Category:</span> {product.category || "Uncategorized"}
         </p>
         <p className="productdisplay-right-category">
-          <span>Tags:</span> Modern, Latest
+          <span>Tags:</span>Modern, Latest {product.tags?.join(", ") || ""}
         </p>
       </div>
     </div>

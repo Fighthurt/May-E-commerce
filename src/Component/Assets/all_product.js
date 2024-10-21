@@ -43,6 +43,8 @@ let all_product = [
     image: p1_img,
     new_price: 24.99,
     old_price: 30.0,
+    description:
+      "This faux leather top is perfect for bringing out your inner rock star. Its bold and edgy look will make you stand out from the crowd.",
   },
   {
     id: 2,
@@ -51,6 +53,8 @@ let all_product = [
     image: p2_img,
     new_price: 29.99,
     old_price: 35.0,
+    description:
+      "Stylish and comfortable capri pants that pair well with any outfit. Ideal for casual outings or a night on the town.",
   },
   {
     id: 3,
@@ -59,6 +63,8 @@ let all_product = [
     image: p3_img,
     new_price: 35.99,
     old_price: 40.0,
+    description:
+      "The Adele Ruffle Mini Dress combines elegance and comfort. Perfect for any formal or semi-formal event with its flattering fit.",
   },
   {
     id: 4,
@@ -67,14 +73,18 @@ let all_product = [
     image: p4_img,
     new_price: 49.99,
     old_price: 55.0,
+    description:
+      "This stylish striped sweater maxi dress will keep you warm and chic during the colder months. The perfect winter wardrobe addition.",
   },
   {
     id: 5,
-    name: "Still Over It Blazer - Taupee",
+    name: "Still Over It Blazer - Taupe",
     category: "women",
     image: p5_img,
     new_price: 34.99,
     old_price: 40.0,
+    description:
+      "A trendy taupe blazer that adds sophistication to any outfit. Ideal for work or business-casual settings.",
   },
   {
     id: 6,
@@ -83,6 +93,8 @@ let all_product = [
     image: p6_img,
     new_price: 29.99,
     old_price: 35.05,
+    description:
+      "Stay cozy in this distressed cable knit sweater, perfect for layering on colder days. A must-have for your winter collection.",
   },
   {
     id: 7,
@@ -91,6 +103,8 @@ let all_product = [
     image: p7_img,
     new_price: 39.99,
     old_price: 50.0,
+    description:
+      "A warm and cozy sherpa shacket that combines country charm with urban style. Ideal for chilly weather.",
   },
   {
     id: 8,
@@ -99,6 +113,8 @@ let all_product = [
     image: p8_img,
     new_price: 79.99,
     old_price: 85.0,
+    description:
+      "This classic denim maxi dress features a timeless design that’s perfect for both casual and semi-formal events.",
   },
   {
     id: 9,
@@ -107,6 +123,8 @@ let all_product = [
     image: p9_img,
     new_price: 39.99,
     old_price: 45.0,
+    description:
+      "Turn heads with this pleated mini skirt set in a striking burgundy. Great for night outs or festive occasions.",
   },
   {
     id: 10,
@@ -115,6 +133,8 @@ let all_product = [
     image: p10_img,
     new_price: 69.99,
     old_price: 75.0,
+    description:
+      "Keep warm and stylish in this oversized long puffer coat. Its chocolate color adds an elegant touch to your winter wardrobe.",
   },
   {
     id: 11,
@@ -123,6 +143,8 @@ let all_product = [
     image: p11_img,
     new_price: 8.0,
     old_price: 10.0,
+    description:
+      "A basic yet versatile black bodysuit with a double-layered design, perfect for layering or wearing solo.",
   },
   {
     id: 12,
@@ -130,7 +152,9 @@ let all_product = [
     category: "women",
     image: p12_img,
     new_price: 39.99,
-    old_price: 45.00,
+    old_price: 45.0,
+    description:
+      "Show your team spirit with this hooded jersey in a green combo, perfect for sports games or casual wear.",
   },
   {
     id: 13,
@@ -139,6 +163,8 @@ let all_product = [
     image: p13_img,
     new_price: 59.99,
     old_price: 65.05,
+    description:
+      "This contrast trucker jacket is perfect for layering and offers a classic look with modern comfort.",
   },
   {
     id: 14,
@@ -147,6 +173,8 @@ let all_product = [
     image: p14_img,
     new_price: 49.99,
     old_price: 60.05,
+    description:
+      "Stay warm and stylish with the Garvey puffer jacket, designed to keep you cozy during cold weather.",
   },
   {
     id: 15,
@@ -155,6 +183,8 @@ let all_product = [
     image: p15_img,
     new_price: 44.99,
     old_price: 50.05,
+    description:
+      "A rugged anorak for the adventurous man, featuring a grey combo design for a modern, athletic look.",
   },
   {
     id: 16,
@@ -163,6 +193,8 @@ let all_product = [
     image: p16_img,
     new_price: 64.99,
     old_price: 70.05,
+    description:
+      "A bold and vibrant red cropped jacket that adds a pop of color to your wardrobe. Perfect for the fashion-forward man.",
   },
   {
     id: 17,
@@ -171,6 +203,8 @@ let all_product = [
     image: p17_img,
     new_price: 59.99,
     old_price: 70.0,
+    description:
+      "The Chadwick Car Coat is a timeless piece, offering a refined look with its camel color and tailored fit.",
   },
   {
     id: 18,
@@ -179,6 +213,8 @@ let all_product = [
     image: p18_img,
     new_price: 59.99,
     old_price: 70.0,
+    description:
+      "A durable black denim pullover jacket, designed for comfort and style.",
   },
   {
     id: 19,
@@ -187,6 +223,8 @@ let all_product = [
     image: p19_img,
     new_price: 25.0,
     old_price: 30.0,
+    description:
+      "A brown bomber jacket with essential features for any season.",
   },
   {
     id: 20,
@@ -195,6 +233,8 @@ let all_product = [
     image: p20_img,
     new_price: 46.99,
     old_price: 50.0,
+    description:
+      "A light blue cropped denim work trucker jacket, perfect for casual outings.",
   },
   {
     id: 21,
@@ -203,6 +243,7 @@ let all_product = [
     image: p21_img,
     new_price: 49.99,
     old_price: 60.0,
+    description: "A blue plaid shacket offering warmth and style in one piece.",
   },
   {
     id: 22,
@@ -211,6 +252,8 @@ let all_product = [
     image: p22_img,
     new_price: 59.99,
     old_price: 65.0,
+    description:
+      "A white weaved puffer vest that combines modern fashion with comfort.",
   },
   {
     id: 23,
@@ -219,6 +262,8 @@ let all_product = [
     image: p23_img,
     new_price: 59.99,
     old_price: 70.0,
+    description:
+      "An indigo trucker jacket with contrast details for a stylish look.",
   },
   {
     id: 24,
@@ -227,6 +272,8 @@ let all_product = [
     image: p24_img,
     new_price: 59.99,
     old_price: 70.0,
+    description:
+      "A light blue padded cropped jacket that adds both warmth and flair.",
   },
   {
     id: 25,
@@ -235,6 +282,8 @@ let all_product = [
     image: p25_img,
     new_price: 34.99,
     old_price: 40.0,
+    description:
+      "A mini puffer jacket perfect for colder weather, ensuring warmth and style.",
   },
   {
     id: 26,
@@ -243,6 +292,8 @@ let all_product = [
     image: p26_img,
     new_price: 37.99,
     old_price: 40.99,
+    description:
+      "Stylish black faux leather pants for kids, designed for comfort and durability.",
   },
   {
     id: 27,
@@ -251,6 +302,8 @@ let all_product = [
     image: p27_img,
     new_price: 29.99,
     old_price: 40.0,
+    description:
+      "A red shacket combining the best of shirt and jacket for all-day comfort.",
   },
   {
     id: 28,
@@ -259,6 +312,7 @@ let all_product = [
     image: p28_img,
     new_price: 37.99,
     old_price: 50.0,
+    description: "A cozy white sherpa shacket perfect for outdoor adventures.",
   },
   {
     id: 29,
@@ -267,14 +321,18 @@ let all_product = [
     image: p29_img,
     new_price: 24.99,
     old_price: 30.0,
+    description:
+      "Medium wash jeans with frayed heart detailing, great for casual wear.",
   },
   {
     id: 30,
-    name: "Minin Conquering Mountains Sherpa Vest - Cream",
+    name: "Mini Conquering Mountains Sherpa Vest - Cream",
     category: "kid",
     image: p30_img,
     new_price: 24.99,
     old_price: 30.0,
+    description:
+      "A cream-colored sherpa vest perfect for outdoor play in cooler weather.",
   },
   {
     id: 31,
@@ -283,6 +341,7 @@ let all_product = [
     image: p31_img,
     new_price: 9.99,
     old_price: 11.0,
+    description: "A cute bucket hat for camping and outdoor fun.",
   },
   {
     id: 32,
@@ -291,6 +350,8 @@ let all_product = [
     image: p32_img,
     new_price: 39.99,
     old_price: 45.0,
+    description:
+      "A warm and comfortable puffer jacket, perfect for staying cozy in cold weather.",
   },
   {
     id: 33,
@@ -299,30 +360,37 @@ let all_product = [
     image: p33_img,
     new_price: 39.99,
     old_price: 50.5,
+    description: "Durable denim jeans made for active kids, perfect for play.",
   },
   {
     id: 34,
     name: "Mini Been Real Nylon Bomber Jacket",
     category: "kid",
     image: p34_img,
-    new_price: "54.99",
-    old_price: "60.00",
+    new_price: 54.99,
+    old_price: 60.0,
+    description:
+      "A stylish nylon bomber jacket that’s both lightweight and warm.",
   },
   {
     id: 35,
     name: "Mini Brianca Bow Wide Leg Jeans",
     category: "kid",
     image: p35_img,
-    new_price: "34.99",
-    old_price: "40.00",
+    new_price: 34.99,
+    old_price: 40.0,
+    description:
+      "Wide leg jeans with a cute bow detail, offering a fashionable look for kids.",
   },
   {
     id: 36,
-    name: "Mini Ella Faux Fur Jacket ",
+    name: "Mini Ella Faux Fur Jacket",
     category: "kid",
     image: p36_img,
-    new_price: "44.99",
-    old_price: "60.00",
+    new_price: 44.99,
+    old_price: 60.0,
+    description:
+      "A faux fur jacket that’s both stylish and warm, perfect for winter days.",
   },
 ];
 

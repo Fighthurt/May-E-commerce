@@ -1,0 +1,175 @@
+.cartitems {
+    margin: 100px auto; /* Center align margin */
+    padding: 0 20px; /* Added padding for mobile view */
+}
+
+.cartitems hr {
+    height: 3px;
+    background: #e2e2e2;
+    border: 0;
+}
+
+.cartitems-format-main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Flexible column setup */
+    align-items: center;
+    gap: 75px;
+    padding: 20px 0;
+    color: #454545;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.productQuantity {
+    height: 48px;
+    width: 48px;
+    padding: 4px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.cartitems-format {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.carticon-product-icon {
+    height: 62px;
+}
+
+.cartitems-remove-icon {
+    width: 15px;
+    margin: 0 40px;
+    cursor: pointer;
+}
+
+.cartitems-quantity {
+    width: 64px;
+    height: 50px;
+    border: 2px solid #ebebeb;
+    background: #fff;
+}
+
+.cartitems-down {
+    display: flex;
+    margin: 0 100px;
+}
+
+.cartitems-total {
+    margin-top: 100px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 200px;
+    gap: 40px;
+}
+
+.cartitems-total-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.cartitems-total button {
+    width: 262px;
+    height: 58px;
+    outline: none;
+    border: none;
+    background: #ff5a5a;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cartitems-promocode {
+    margin-top: 100px;
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cartitems-promocode p {
+    color: #555;
+}
+
+.cartitems-promobox {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 504px; /* Limit max width */
+    margin-top: 15px;
+    padding-left: 20px;
+    height: 58px;
+    background: #eaeaea;
+}
+
+.cartitems-promobox input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    width: 70%; /* Adjusted width for better fitting */
+    height: 50px;
+}
+
+.cartitems-promobox button {
+    width: 100%; /* Full width for button on smaller screens */
+    max-width: 170px; /* Limit max width for button */
+    height: 58px;
+    font-size: 16px;
+    background: black;
+    color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .cartitems-format-main {
+        grid-template-columns: repeat(3, 1fr); /* Adjusted for tablets */
+        gap: 40px;
+    }
+
+    .cartitems-down {
+        margin: 0 50px; /* Reduced margin */
+    }
+
+    .cartitems-total {
+        margin-right: 50px; /* Adjusted margin for smaller screens */
+    }
+
+    .cartitems-promobox {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 100%; /* Limit max width */
+    }
+}
+
+@media (max-width: 480px) {
+    .cartitems-format-main {
+        grid-template-columns: 1fr; /* Stack items on mobile */
+        gap: 20px; /* Reduced gap */
+    }
+
+    .cartitems {
+        margin: 50px auto; /* Adjusted margin for smaller screens */
+    }
+
+    .cartitems-down {
+        flex-direction: column; /* Stack elements vertically */
+        margin: 0 20px; /* Adjusted margin */
+    }
+
+    .cartitems-total {
+        margin-right: 20px; /* Adjusted margin for smaller screens */
+    }
+
+    .cartitems-total button {
+        width: 100%; /* Full width for button on mobile */
+    }
+
+    .cartitems-promobox {
+        padding-left: 10px; /* Adjusted padding */
+    }
+}

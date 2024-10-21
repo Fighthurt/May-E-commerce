@@ -4,13 +4,13 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 100px;
-
 }
 
 .new-collections h1 {
     color: #171717;
-    font-size: 50px;
+    font-size: 2.5rem; /* Use rem for scalability */
     font-weight: 600;
+    text-align: center; /* Center text for better alignment */
 }
 
 .new-collections hr {
@@ -33,10 +33,38 @@
     width: 100%; 
     max-width: 250px; 
     text-align: center; 
+    transition: transform 0.3s; /* Add a hover effect */
+}
+
+.collection-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .collection-item img {
     width: 100%; 
     height: auto;
     object-fit: cover; 
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .collections {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+}
+
+@media (max-width: 800px) {
+    .collections {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .collections {
+        grid-template-columns: 1fr; /* 1 column for mobile screens */
+    }
+
+    .new-collections h1 {
+        font-size: 2rem; /* Reduce font size for smaller screens */
+    }
 }

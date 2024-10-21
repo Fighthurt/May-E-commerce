@@ -3,31 +3,25 @@ import "./Item.css";
 import { Link } from "react-router-dom";
 
 const Item = (props) => {
-  const { id, image, name, new_price, old_price } = props;
-  // console.log("item", id, image, name, new_price, old_price, props)
-  // console.log("Item props:", props);
-  // console.log("Item component props:", { id, image, name, new_price, old_price });
+  const {
+    id, image, name, new_price, old_price
+  } = props;
 
+  console.log("item", id, image, name, new_price, old_price, props)
 
   return (
     <div className="item">
-      <Link
-        to={{
-          pathname: `/product/${id}`,
-          state: {
-            id,
-            image,
-            name,
-            new_price,
-            old_price,
-          },
-        }}
-      >
-        <img src={image} alt={name} />
-      </Link>
-      <h2>{name}</h2>
-      <p>New Price: ${new_price}</p>
-      <p>Old Price: ${old_price}</p>
+      <Link to={`/product/${props.id}`}><img onClick={window.scrollTo(0,0)} src={props.image} alt='' /></Link>
+      <p>{props.name}</p>
+      <div className="item-prices">
+        <div className="item-price-new">
+          ${props.new_price}
+        </div>
+        <div className="item-price-old">
+          ${props.old_price}
+        </div>
+      </div>
+     
     </div>
   );
 };

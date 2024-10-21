@@ -1,55 +1,92 @@
-.offers{
-    width: 65%;
-    height: 60vh;
+.offers {
+    width: 90%; /* Use a percentage for responsiveness */
+    max-width: 1200px; /* Limit maximum width */
+    height: auto; /* Allow height to adjust based on content */
     display: flex;
     margin: auto;
-    padding: 0px 140px;
+    padding: 40px 20px; /* Adjust padding for smaller screens */
     margin-bottom: 150px;
-    background: linear-gradient( 180deg, #fde1ff 0%, #e1ffea22 60%);
+    background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
 }
 
-.offers-left{
+.offers-left {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.offers-left h1{
+.offers-left h1 {
     color: #171717;
-    font-size: 80px;
+    font-size: 3.5rem; /* Use rem for scalability */
     font-weight: 600;
 }
 
-.offers-left p{
+.offers-left p {
     color: #171717;
-    font-size: 22px;
+    font-size: 1.25rem; /* Use rem for scalability */
     font-weight: 600;
 }
 
-.offers-left button{
+.offers-left button {
     width: 282px;
     height: 70px;
     border-radius: 35px;
     background: #ff4141;
     border: none;
     color: white;
-    font-size: 22px;
+    font-size: 1.25rem; /* Use rem for scalability */
     font-weight: 500;
     margin-top: 30px;
     cursor: pointer;
 }
 
-.offers-right{
+/* Ensure the right section aligns properly */
+.offers-right {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-top: 50px;
-    
 }
 
-.offers-right img{
-    height: 550px;
-    width: auto;
+.offers-right img {
+    max-height: 100%; /* Ensure image fits the height of the container */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 800px) {
+    .offers {
+        flex-direction: column; /* Stack left and right sections on smaller screens */
+        height: auto; /* Allow height to adjust */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .offers-left {
+        align-items: center; /* Center text for better alignment */
+        text-align: center; /* Center align text */
+    }
+
+    .offers-left h1 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .offers-left p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .offers-right {
+        justify-content: center; /* Center the image on smaller screens */
+        padding-top: 20px; /* Adjust top padding */
+    }
+
+    .offers-right img {
+        height: auto; /* Allow image height to adjust */
+        width: 80%; /* Make the image responsive */
+    }
+
+    .offers-left button {
+        width: 100%; /* Make button full width on smaller screens */
+    }
 }
