@@ -1,97 +1,139 @@
-
-
 .loginsignup {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-color: #f0f0f0;
+    padding: 20px; /* Added padding for smaller screens */
+    box-sizing: border-box; /* Include padding in the width */
 }
 
 .loginsignup-container {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  height: 600px;
-  max-width: 580px;
-  width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    height: auto; /* Change to auto to fit content */
+    max-width: 580px; /* Maintain max width */
+    width: 100%;
 }
 
 h1 {
-  text-align: center;
-  color: #333;
-  margin: 20px 0px;
+    text-align: center;
+    color: #333;
+    margin: 20px 0px;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 input {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 12px;
-  margin-bottom: 15px;
-  font-size: 16px;
-  width: 100%;
-  transition: border-color 0.3s ease-in-out;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    width: 100%;
+    transition: border-color 0.3s ease-in-out;
 }
 
 input:focus {
-  border-color: red;
-  outline: none;
+    border-color: red;
+    outline: none;
 }
 
 button {
-  background-color: red;
-  color: white;
-  padding: 12px;
-  font-size: 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+    background-color: red;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
-  background-color: red;
+    background-color: darkred; /* Darker shade on hover for better contrast */
 }
 
 .loginsignup-login {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 14px;
-  color: #555;
-  font-weight: 500;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
 }
 
 .toggle-link {
-  
-  cursor: pointer;
-  font-weight: bold;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .toggle-link:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .loginsignup-agree {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  font-size: 12px;
-  color: #777;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #777;
 }
 
 .loginsignup-agree p {
-  margin-left: 8px;
+    margin-left: 8px;
 }
 
 input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  margin-bottom: 6px;
+    width: 16px;
+    height: 16px;
+    margin-bottom: 6px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .loginsignup-container {
+        padding: 20px; /* Reduce padding for tablets */
+    }
+
+    h1 {
+        font-size: 28px; /* Smaller heading size for tablets */
+    }
+
+    input, button {
+        font-size: 14px; /* Smaller font size for inputs and buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .loginsignup {
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
+    .loginsignup-container {
+        padding: 15px; /* Reduce padding for mobile */
+    }
+
+    h1 {
+        font-size: 24px; /* Smaller heading size for mobile */
+    }
+
+    input, button {
+        font-size: 12px; /* Smaller font size for inputs and buttons */
+    }
+
+    .loginsignup-agree {
+        flex-direction: column; /* Stack agree section on mobile */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .loginsignup-agree p {
+        margin-left: 0; /* Remove margin for mobile */
+        margin-top: 5px; /* Add margin-top for spacing */
+    }
 }
