@@ -1,69 +1,97 @@
+
+
 .loginsignup {
-    width: 100%;
-    height: 80vh;
-    background-color: #fce3fe; 
-    padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #f0f0f0;
 }
 
 .loginsignup-container {
-    padding: 40px 60px;
-    background: white;
-    height: 600px;
-    width: 580px;
-    margin: auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  height: 600px;
+  max-width: 580px;
+  width: 100%;
 }
 
-.loginsignup-container h1 {
-    margin: 20px 0px;
+h1 {
+  text-align: center;
+  color: #333;
+  margin: 20px 0px;
 }
 
-.loginsignup-fields{
-    display: flex;
-    flex-direction: column;
-    gap: 29px;
-    margin-top: 30px;
+form {
+  display: flex;
+  flex-direction: column;
 }
 
-.loginsignup-fields input {
-    height: 72px;
-    width: 100%;
-    padding-left: 20px;
-    border: 1px solid #c9c9c9;
-    outline: none;
-    color: #5c5c5c;
-    font-size: 18px;
+input {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  width: 100%;
+  transition: border-color 0.3s ease-in-out;
 }
 
-.loginsignup-container button {
-    width: 580px;
-    height: 72px;
-    background: #ff4141;
-    margin-top: 30px;
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
+input:focus {
+  border-color: red;
+  outline: none;
 }
 
-.loginsignup-login{
-    margin-top: 20px;
-    color: #5c5c5c;
-    font-size: 18px;
-    font-weight: 500;
+button {
+  background-color: red;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.loginsignup-login span{
-    color: #ff4141;
-    font-weight: 600;
+button:hover {
+  background-color: red;
 }
 
-.loginsignup-agree{
-    display: flex;
-    align-items: center;
-    margin-top: 25px;
-    gap: 20px;
-    color: #5c5c5c;
-    font-size: 18px;
-    font-weight: 500;
+.loginsignup-login {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+.toggle-link {
+  
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.toggle-link:hover {
+  text-decoration: underline;
+}
+
+.loginsignup-agree {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #777;
+}
+
+.loginsignup-agree p {
+  margin-left: 8px;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-bottom: 6px;
 }

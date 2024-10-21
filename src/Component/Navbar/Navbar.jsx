@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../Assets/logo.png";
@@ -8,7 +8,7 @@ import { ShopContext } from "../../Context/ShopContext";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
-  const { cartItems } = useContext(ShopContext); // Get cart items from the context
+  const { cartItems, getTotalCartAmount } = useContext(ShopContext); // Get cart items from the context
   const navigate = useNavigate();
 
   // Calculate total cart items
@@ -17,7 +17,9 @@ const Navbar = () => {
     0
   );
 
-  // Function to navigate to the cart page when the cart icon is clicked
+  // Calculate total amount
+  const totalAmount = getTotalCartAmount();
+
   const handleCartClick = () => {
     navigate("/cart");
   };

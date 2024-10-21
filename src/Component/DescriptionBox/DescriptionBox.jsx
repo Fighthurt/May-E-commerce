@@ -28,6 +28,7 @@ const DescriptionBox = () => {
                   customers find specific products or categories. <br/>
                   Customer Account:Enables customers to create profiles, manage orders, and save their information.
         </p>
+        
       </div>
     </div>
   );

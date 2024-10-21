@@ -1,0 +1,93 @@
+/* Center the form and give it a clean layout */
+.payment-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.payment-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.payment-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+
+form {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Style the inputs */
+form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+form input::placeholder {
+  color: #888;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #555;
+  background-color: #f9f9f9;
+  transition: 0.3s ease-in-out;
+}
+
+/* Style the submit button */
+form button {
+  background-color: red;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Add responsive behavior */
+@media (max-width: 768px) {
+  .payment-container {
+    padding: 20px;
+  }
+
+  form {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  form input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  form button {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
