@@ -1,10 +1,9 @@
 .offers {
-    width: 90%; /* Use a percentage for responsiveness */
-    max-width: 1200px; /* Limit maximum width */
-    height: auto; /* Allow height to adjust based on content */
+    width: 65%;
+    height: 60vh;
     display: flex;
     margin: auto;
-    padding: 40px 20px; /* Adjust padding for smaller screens */
+    padding: 0px 140px;
     margin-bottom: 150px;
     background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
 }
@@ -14,18 +13,22 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center; /* Align content horizontally to the center */
+    text-align: center;  /* Align text in the center */
 }
 
 .offers-left h1 {
     color: #171717;
-    font-size: 3.5rem; /* Use rem for scalability */
+    font-size: 80px;
     font-weight: 600;
+    margin: 0; /* Remove margin to center the text properly */
 }
 
 .offers-left p {
     color: #171717;
-    font-size: 1.25rem; /* Use rem for scalability */
+    font-size: 22px;
     font-weight: 600;
+    margin: 0; /* Remove margin for better alignment */
 }
 
 .offers-left button {
@@ -35,13 +38,12 @@
     background: #ff4141;
     border: none;
     color: white;
-    font-size: 1.25rem; /* Use rem for scalability */
+    font-size: 22px;
     font-weight: 500;
     margin-top: 30px;
     cursor: pointer;
 }
 
-/* Ensure the right section aligns properly */
 .offers-right {
     flex: 1;
     display: flex;
@@ -51,42 +53,71 @@
 }
 
 .offers-right img {
-    max-height: 100%; /* Ensure image fits the height of the container */
-    width: auto; /* Maintain aspect ratio */
+    height: 550px;
+    width: auto;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 800px) {
+
+/* Tablet View */
+@media (max-width: 768px) {
     .offers {
-        flex-direction: column; /* Stack left and right sections on smaller screens */
-        height: auto; /* Allow height to adjust */
-        padding: 20px; /* Reduce padding for smaller screens */
+        width: 90%; /* Increase width for better fit */
+        height: auto; /* Allow height to adjust to content */
+        padding: 0 20px; /* Reduce padding */
+        margin-bottom: 100px; /* Adjust bottom margin */
+        flex-direction: column; /* Stack left and right sections vertically */
     }
 
     .offers-left {
-        align-items: center; /* Center text for better alignment */
-        text-align: center; /* Center align text */
+        align-items: center; /* Center align text and button */
+        text-align: center; /* Center text for better readability */
     }
 
     .offers-left h1 {
-        font-size: 2.5rem; /* Adjust font size for smaller screens */
+        font-size: 50px; /* Smaller font size for heading */
     }
 
     .offers-left p {
-        font-size: 1rem; /* Adjust font size for smaller screens */
-    }
-
-    .offers-right {
-        justify-content: center; /* Center the image on smaller screens */
-        padding-top: 20px; /* Adjust top padding */
-    }
-
-    .offers-right img {
-        height: auto; /* Allow image height to adjust */
-        width: 80%; /* Make the image responsive */
+        font-size: 18px; /* Smaller font size for paragraph */
     }
 
     .offers-left button {
-        width: 100%; /* Make button full width on smaller screens */
+        width: 100%; /* Full width button */
+    }
+
+    .offers-right {
+        justify-content: center; /* Center image in mobile view */
+        padding-top: 20px; /* Adjust padding for mobile */
+    }
+
+    .offers-right img {
+        height: auto; /* Allow height to adjust to maintain aspect ratio */
+        max-width: 100%; /* Ensure image is responsive */
     }
 }
+
+/* Mobile View */
+@media (max-width: 480px) {
+    .offers {
+        padding: 0 10px; /* Further reduce padding */
+    }
+
+    .offers-left h1 {
+        font-size: 30px; /* Smaller font size for mobile */
+    }
+
+    .offers-left p {
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+
+    .offers-left button {
+        height: 50px; /* Adjust button height for better touch target */
+        font-size: 18px; /* Adjust font size for button */
+    }
+
+    .offers-right img {
+        height: auto; /* Maintain aspect ratio */
+        max-width: 100%; /* Make sure the image fits within the container */
+    }
+}
+

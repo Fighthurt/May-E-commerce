@@ -67,28 +67,66 @@ form button {
 }
 
 form button:hover {
-  background-color: #45a049;
+  background-color: red;
 }
 
-/* Add responsive behavior */
+/* Tablet View */
 @media (max-width: 768px) {
-  .payment-container {
-    padding: 20px;
-  }
+    .payment-container {
+        padding: 20px; /* Add padding for better spacing */
+    }
 
-  form {
-    padding: 20px;
-    max-width: 90%;
-    
-  }
+    .payment-container h1 {
+        font-size: 2rem; /* Smaller font size for heading */
+    }
 
-  form input {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
+    .payment-container h2 {
+        font-size: 1.2rem; /* Smaller font size for subheading */
+    }
 
-  form button {
-    padding: 10px;
-    font-size: 1rem;
-  }
+    form {
+        padding: 30px; /* Reduce padding for the form */
+        gap: 15px; /* Adjust gap between form elements */
+    }
+
+    form input {
+        font-size: 0.9rem; /* Slightly smaller font size for inputs */
+    }
+
+    form button {
+        font-size: 1rem; /* Adjust button font size */
+    }
 }
+
+/* Mobile View */
+@media (max-width: 480px) {
+    .payment-container {
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
+    .payment-container h1 {
+        font-size: 1.5rem; /* Further reduce font size for mobile heading */
+    }
+
+    .payment-container h2 {
+        font-size: 1rem; /* Further reduce font size for mobile subheading */
+    }
+
+    form {
+        padding: 20px; /* Further reduce padding for the form */
+        gap: 10px; /* Adjust gap for mobile */
+    }
+
+    form input {
+        padding: 10px; /* Reduce padding in inputs */
+        font-size: 0.8rem; /* Smaller font size for mobile inputs */
+    }
+
+    form button {
+        padding: 10px; /* Adjust button padding */
+        font-size: 0.9rem; /* Smaller font size for mobile button */
+    }
+}
+
+
+
