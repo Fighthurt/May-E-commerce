@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     gap: 50px; 
-    padding: 20px; /* Added padding for overall spacing */
 }
 
 .footer-logo {
@@ -12,6 +11,7 @@
     align-items: center;
     gap: 20px; 
 }
+
 
 .footer-logo p {
     font-size: 24px;
@@ -31,21 +31,19 @@
     cursor: pointer; 
 }
 
-/* Social icons container styling */
 .footer-socials-icon {
     display: flex; 
     gap: 20px; 
 }
 
-/* Container for footer icons with background */
-.footer-icons-container {
+.footer-icons-container  {
     padding: 10px;
     padding-bottom: 6px;
     background: #fbfbfb;
-    border: 1px solid transparent; /* Changed to solid border for clarity */
+    border: 1px;
 }
 
-/* Copyright section styling */
+
 .footer-copyright {
     display: flex;
     flex-direction: column;
@@ -63,36 +61,62 @@
     height: 3px;
     background: #c7c7c7;
     width: 80%;
+   
+    
 }
 
 /* Media Queries for Responsiveness */
+
+/* Tablet View (max-width: 768px) */
 @media (max-width: 768px) {
-    .footer-links {
-        flex-direction: column; /* Stack links vertically on smaller screens */
-        gap: 20px; /* Reduced gap for better spacing */
-        align-items: center; /* Center align on mobile */
+    .footer {
+        gap: 30px; /* Reduce gap for tablet view */
     }
-
     .footer-logo p {
-        font-size: 20px; /* Slightly smaller font size */
+        font-size: 20px; /* Decrease font size */
     }
-
+    .footer-links {
+        gap: 30px; /* Reduce gap between links */
+        font-size: 18px; /* Decrease font size */
+    }
     .footer-copyright {
-        font-size: 18px; /* Adjust font size for mobile */
+        font-size: 18px; /* Decrease font size */
+        gap: 20px; /* Adjust gap */
+    }
+    .footer-copyright hr {
+        width: 90%; /* Adjust width of hr */
+    }
+    .footer-socials-icon {
+        gap: 15px; /* Reduce gap between social icons */
     }
 }
 
+/* Mobile View (max-width: 480px) */
 @media (max-width: 480px) {
     .footer {
-        gap: 30px; /* Reduced gap for mobile */
-        padding: 10px; /* Less padding on mobile */
+        gap: 20px; /* Further reduce gap */
+        padding: 20px; /* Add padding */
     }
-
+    .footer-logo {
+        flex-direction: column; /* Stack logo and text vertically */
+        gap: 10px; /* Reduce gap */
+    }
+    .footer-logo p {
+        font-size: 18px; /* Further decrease font size */
+    }
     .footer-links {
-        font-size: 18px; /* Smaller font size for mobile */
+        flex-direction: column; /* Stack links vertically */
+        gap: 20px; /* Adjust gap between links */
+        font-size: 16px; /* Decrease font size */
     }
-
+    .footer-socials-icon {
+        justify-content: center; /* Center the social icons */
+        gap: 10px; /* Reduce gap further */
+    }
     .footer-copyright {
-        font-size: 16px; 
+        font-size: 16px; /* Decrease font size for mobile */
+    }
+    .footer-copyright hr {
+        width: 95%; /* Adjust hr width */
     }
 }

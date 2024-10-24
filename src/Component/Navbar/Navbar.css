@@ -1,34 +1,33 @@
-.navbar {
+.navbar{
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-    justify-content: space-between; /* Change to space-between for better spacing */
+    justify-content: space-around;
     padding: 16px;
     box-shadow: 0 1px 3px -2px black;
 }
 
-.nav-logo {
+.nav-logo{
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.nav-logo p {
+.nav-logo p{
     color: #171717;
-    font-size: 2rem; /* Use rem for scalability */
+    font-size: 38px;
     font-weight: 600;
 }
 
-.nav-menu {
+.nav-menu{
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 30px; /* Reduced gap for better fit on smaller screens */
+    gap: 50px;
     color: #626262;
-    font-size: 1.25rem; /* Use rem for scalability */
+    font-size: 20px;
     font-weight: 500;
 }
 
-.nav-menu li {
+.nav-menu li{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,7 +36,7 @@
     cursor: pointer;
 }
 
-.nav-menu hr {
+.nav-menu hr{
     border: none;
     width: 80%;
     height: 3px;
@@ -45,33 +44,34 @@
     background-color: red;
 }
 
-.nav-login-cart {
+.nav-login-cart{
     display: flex;
     align-items: center;
-    gap: 30px; /* Reduced gap for better fit on smaller screens */
+    gap: 45px;
+
 }
 
-.nav-login-cart button {
-    width: 100%; /* Make button width flexible */
-    max-width: 157px; /* Set a maximum width */
+.nav-login-cart button{
+    width: 157px;
     height: 58px;
     outline: none;
     border: 1px solid grey;
     border-radius: 75px;
     color: #515151;
-    font-size: 1.25rem; /* Use rem for scalability */
+    font-size: 20px;
     font-weight: 500;
     background: white;
     cursor: pointer;
 }
 
-.nav-login-cart button:active {
+.nav-login-cart button:active{
     background: #f3f3f3;
 }
-
-.nav-cart-count {
-    position: relative; /* Use relative for better positioning */
-    margin-left: -10px; /* Adjust positioning */
+.nav-cart-count{
+    position: absolute;
+    margin-top: -50px; 
+    margin-left: 30px; 
+    
     width: 22px;
     height: 22px;
     display: flex;
@@ -84,40 +84,69 @@
     font-weight: bold;
 }
 
-/* Media Queries for Responsiveness */
+
+
+
+/* Tablet View (max-width: 768px) */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Stack elements on smaller screens */
-        align-items: center; /* Center align items */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align elements */
         padding: 10px; /* Adjust padding */
+    }
+
+    .nav-logo p {
+        font-size: 30px; /* Reduce the logo font size */
     }
 
     .nav-menu {
         flex-direction: column; /* Stack menu items vertically */
-        gap: 15px; /* Reduce gap for vertical stacking */
+        gap: 20px; /* Reduce the gap between menu items */
     }
 
     .nav-login-cart {
         flex-direction: column; /* Stack buttons vertically */
-        gap: 10px; /* Reduce gap for vertical stacking */
+        gap: 20px; /* Reduce the gap for a compact look */
     }
 
     .nav-login-cart button {
         width: 100%; /* Make buttons take full width */
-        max-width: none; /* Remove max-width constraint */
+        max-width: 200px; /* Adjust max-width of buttons */
     }
 }
 
+/* Mobile View (max-width: 480px) */
 @media (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* Ensure vertical stacking for small screens */
+        align-items: center;
+        padding: 10px;
+    }
+
     .nav-logo p {
-        font-size: 1.5rem; /* Reduce font size for smaller screens */
+        font-size: 24px; /* Further reduce the logo font size */
     }
 
     .nav-menu {
-        font-size: 1rem; /* Further reduce font size */
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 15px; /* Further reduce the gap */
+        font-size: 18px; /* Reduce font size for smaller screens */
+    }
+
+    .nav-login-cart {
+        flex-direction: column; /* Stack login and cart options vertically */
+        gap: 15px;
     }
 
     .nav-login-cart button {
-        font-size: 1rem; /* Further reduce font size for buttons */
+        width: 100%; /* Ensure buttons are responsive and take full width */
+        max-width: 150px;
+        font-size: 18px; /* Reduce font size for smaller buttons */
+    }
+
+    .nav-cart-count {
+        width: 20px;
+        height: 20px;
+        font-size: 12px; /* Adjust font size inside cart icon */
     }
 }
